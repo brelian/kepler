@@ -1,0 +1,18 @@
+{
+    "name": "syncher/kepler",
+    "description": "Practice Algorithm and Data Structrue using PHP",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Syncher",
+            "email": "syncher@qq.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Structure\\": "Structure/",
+            "Algorithm\\": "Algorithm/"
+        }
+    }
+}
