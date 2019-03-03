@@ -9,12 +9,10 @@ require_once __DIR__ . '/../vendor/autoload.php';
 
 class LinkedListTest extends TestCase
 {
-    public function testHello()
+    public function testDivideInt()
     {
-        $single = new SingleLinkedList(234);
-        $root = $single->getRoot();
-        $this->assertEquals(234,$root->getVal());
-        return $single;
+        $this->assertEquals(3, floor(7 / 2));
+        $this->assertEquals(3, floor(6 / 2));
     }
 }
 
