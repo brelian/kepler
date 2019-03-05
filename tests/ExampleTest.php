@@ -22,3 +22,4 @@ class ExampleTest extends TestCase
     }
 
 }
+
