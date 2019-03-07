@@ -20,18 +20,18 @@ class QuickSort
     private function quickSort(array &$data, int $lo, int $hi)
     {
         if ($hi <= $lo) { // 空数组，或只有一个元素
-            return ;
+            return;
         }
         $j = $this->partition($data, $lo, $hi);
-        $this->quickSort($data, $lo, $j-1);
-        $this->quickSort($data, $j+1, $hi);
+        $this->quickSort($data, $lo, $j - 1);
+        $this->quickSort($data, $j + 1, $hi);
     }
 
     private function partition(array &$data, int $lo, int $hi)
     {
         $i = $lo;
         $j = $hi + 1;
-        $pivot = $data[$lo];
+        $pivot = $data[$lo]; // 基准
 
         while (true) {
             while ($data[++$i] < $pivot) {
@@ -40,20 +40,21 @@ class QuickSort
             while ($pivot < $data[--$j]) {
                 if ($j === $lo) break;
             }
+
             if ($i >= $j) {
                 break;
             }
-            // exchange
+
             $this->exchange($data, $i, $j);
         }
         $this->exchange($data, $lo, $j); // i 和 j 相遇的位置是 pivot 的位置
         return $j;
     }
 
-    private function exchange(array &$data, int $i, int $j):void
+    private function exchange(array &$data, int $i, int $j): void
     {
         if ($data[$i] === $data[$j]) {
-            return ;
+            return;
         }
         $data[$i] ^= $data[$j];
         $data[$j] ^= $data[$i];
