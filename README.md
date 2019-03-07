@@ -56,4 +56,4 @@
 ### 2. 查找树
 
 ### 3. 排序
-- [快速排序](blob/master/src/Algorithm/Sort/Sorter.php)
+- [快速排序](blob/master/src/Algorithm/Sort/QuickSorter.php)
