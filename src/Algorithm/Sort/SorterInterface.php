@@ -12,7 +12,7 @@ namespace App\Algorithm\Sort;
 interface SorterInterface
 {
 
-    public function quickSort(array &$data);
+    public function quickSort(array $data);
 
     public function bubbleSort(array &$data);
 
