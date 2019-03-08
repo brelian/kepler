@@ -17,26 +17,29 @@
 
 项目目录结构如下
 
-```json
+```javascript
 .
 ├── src
-│   ├── Algorithm 			 	# 算法
-│   │   ├── Search 				# 搜索算法
+│   ├── Algorithm 			 	  # 算法
+│   │   ├── Search 				  # 搜索算法
 │   │   └── Sort				  # 排序算法
-│   └── Structure
+│   └── Structure                 # 数据结构
 │       ├── ADT					  # 抽象数据类型
 │       ├── Heap				  # 堆
-│       ├── LinkedList	  # 链表
-│       ├── PriorityQueue # 优先队列
+│       ├── LinkedList	          # 链表
+│       ├── PriorityQueue         # 优先队列
 │       ├── Queue				  # 队列
-│       ├── Stack			  	# 栈
+│       ├── Stack			  	  # 栈
 │       └── Tree				  # 树
-└── tests						      # 测试用例
+└── tests						  # 测试用例
 
 ```
+相关的接口实现后，在命令行用 `phpunit` 进行测试，如下测试排序算法
 
-
-
+```shell
+> vendor/bin/phpunit tests/SorterTest.php
+```
+测试排序算法。
 ## 数据结构
 
 ### 1. 线性表

@@ -34,12 +34,15 @@ class QuickSort
         $pivot = $data[$lo]; // 基准
 
         while (true) {
-            while ($data[++$i] < $pivot) {
-                if ($i === $hi) break;
-            }
-            while ($pivot < $data[--$j]) {
-                if ($j === $lo) break;
-            }
+            /**
+             * 找一个比基准大的，找到的时候会跳出循环
+             * 如果已经有序，那么 $i == $hi 时终止循环
+             */
+            while ($data[++$i] < $pivot && $i < $hi);
+            /**
+             * 找一个比基准小的，找到的时候会跳出循环
+             */
+            while ($pivot < $data[--$j] && $j > $lo);
 
             if ($i >= $j) {
                 break;
