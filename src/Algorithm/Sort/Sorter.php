@@ -18,6 +18,7 @@ class Sorter implements SorterInterface
 
     public function bucketSort(array &$data)
     {
+        // $sorter = new
         // TODO: Implement bucketSort() method.
     }
 
