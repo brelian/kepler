@@ -30,23 +30,21 @@ class QuickSort
     private function partition(array &$data, int $lo, int $hi)
     {
         $i = $lo;
-        $j = $hi + 1;
+        $j = $hi;
         $pivot = $data[$lo]; // 基准
 
-        while (true) {
+        while ($i != $j) {
+            /**
+             * 找一个比基准小的，找到的时候会跳出循环
+             */
+            while ($pivot <= $data[$j] && $i < $j)
+                $j--;
             /**
              * 找一个比基准大的，找到的时候会跳出循环
              * 如果已经有序，那么 $i == $hi 时终止循环
              */
-            while ($data[++$i] < $pivot && $i < $hi);
-            /**
-             * 找一个比基准小的，找到的时候会跳出循环
-             */
-            while ($pivot < $data[--$j] && $j > $lo);
-
-            if ($i >= $j) {
-                break;
-            }
+            while ($data[$i] <= $pivot && $i < $j)
+                $i++;
 
             $this->exchange($data, $i, $j);
         }
