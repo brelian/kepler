@@ -3,40 +3,37 @@
  * Created by PhpStorm.
  * User: syncher
  * Date: 3/21/19
- * Time: 7:56 PM
+ * Time: 8:17 PM
  */
 
 namespace App\Algorithm\Sort;
 
 
-class SelectionSort
+class InsertionSort
 {
-    public function sort(array $data):array
+    public function sort(array $data): array
     {
         $this->selectionSort($data);
         return $data;
     }
 
+    /**
+     * current cursor left is sorted, then find the position of current cursor
+     * @param array $data
+     */
     private function selectionSort(array &$data):void
     {
         $length = count($data);
-        for ($i = 0; $i < $length-1; $i++) {
-            /**
-             * minimum item position
-             */
-            $minPos = $i;
-            // find minimum item
-            for ($j = $i + 1; $j < $length; $j++) {
-                if ($data[$j] < $data[$minPos]) {
-                    $minPos = $j;
-                }
-
+        for ($i = 1; $i < $length; $i++) {
+            $cursor = $i;
+            // while cursor data smaller then before, do exchange
+            while ($cursor > 0 && $data[$cursor] < $data[$cursor-1]) {
+                $this->exchange($data, $cursor, $cursor-1);
+                $cursor--;
             }
-            // move minimum item to position i
-
-            $this->exchange($data, $i, $minPos);
         }
     }
+
 
     private function exchange(array &$data, int $i, int $j): void
     {
@@ -47,5 +44,6 @@ class SelectionSort
         $data[$j] ^= $data[$i];
         $data[$i] ^= $data[$j];
     }
+
 
 }

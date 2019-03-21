@@ -18,7 +18,6 @@ class Sorter implements SorterInterface
 
     public function bucketSort(array $data)
     {
-        // $sorter = new
         // TODO: Implement bucketSort() method.
     }
 
@@ -29,7 +28,8 @@ class Sorter implements SorterInterface
 
     public function insertionSort(array $data)
     {
-        // TODO: Implement insertionSort() method.
+        $sorter = new InsertionSort();
+        return $sorter->sort($data);
     }
 
     public function mergeSort(array $data)
