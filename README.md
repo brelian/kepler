@@ -2,14 +2,15 @@
 
 ## TODO list
 
+**2019-03-21**
+
+> 完成选择序算法
+> 完成插入序算法
+
+
 **2019-03-07**
 
 > 完成快速排序算法
-
-**2019-03-06 ~ 2019-03-10**
-
->1.  完成单链表抽象数据结构定义
->2.  完成单链表测试用例
 
 ## 项目介绍
 
@@ -59,5 +60,7 @@
 ### 2. 查找树
 
 ### 3. 排序
+- [插入排序](src/Algorithm/Sort/InsertionSort.php)
+- [选择排序](src/Algorithm/Sort/SelectionSort.php)
 - [快速排序](src/Algorithm/Sort/QuickSort.php)
 
