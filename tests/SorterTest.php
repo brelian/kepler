@@ -34,4 +34,16 @@ class SorterTest extends TestCase
         $this->assertEquals($this->sorter->quickSort([1,2,3,2]),[1,2,2,3]);
     }
 
+
+    public function testSelectionSort()
+    {
+
+        $this->assertEquals($this->sorter->selectionSort([]),[]);
+        $this->assertEquals($this->sorter->selectionSort([1]),[1]);
+        $this->assertEquals($this->sorter->quickSort([2,1]),[1,2]);
+        $this->assertEquals($this->sorter->quickSort([1,2,3]),[1,2,3]);
+        $this->assertEquals($this->sorter->quickSort([2,3,1]),[1,2,3]);
+        $this->assertEquals($this->sorter->quickSort([1,3,2]),[1,2,3]);
+        $this->assertEquals($this->sorter->quickSort([1,2,3,2]),[1,2,2,3]);
+    }
 }
