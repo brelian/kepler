@@ -62,5 +62,6 @@
 ### 3. 排序
 - [插入排序](src/Algorithm/Sort/InsertionSort.php)
 - [选择排序](src/Algorithm/Sort/SelectionSort.php)
+- [桶排序](src/Algorithm/Sort/BucketSort.php)
 - [快速排序](src/Algorithm/Sort/QuickSort.php)
 
