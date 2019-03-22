@@ -18,7 +18,8 @@ class Sorter implements SorterInterface
 
     public function bucketSort(array $data)
     {
-        // TODO: Implement bucketSort() method.
+        $sorter = new BucketSort();
+        return $sorter->sort($data);
     }
 
     public function heapSort(array $data)

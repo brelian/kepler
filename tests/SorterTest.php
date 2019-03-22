@@ -59,4 +59,19 @@ class SorterTest extends TestCase
         $this->assertEquals($this->sorter->insertionSort([1,3,2]),[1,2,3]);
         $this->assertEquals($this->sorter->insertionSort([1,2,3,2]),[1,2,2,3]);
     }
+
+    public function testBucketSort()
+    {
+
+        $this->assertEquals($this->sorter->bucketSort([]),[]);
+        $this->assertEquals($this->sorter->bucketSort([1]),[1]);
+        $this->assertEquals($this->sorter->bucketSort([2,1]),[1,2]);
+        $this->assertEquals($this->sorter->bucketSort([1,2,3]),[1,2,3]);
+        $this->assertEquals($this->sorter->bucketSort([2,3,1]),[1,2,3]);
+        $this->assertEquals($this->sorter->bucketSort([1,3,2]),[1,2,3]);
+        $this->assertEquals($this->sorter->bucketSort([1,2,3,2]),[1,2,2,3]);
+        // exception test: expectException should before the throw exception method calling
+        $this->expectExceptionCode(100);
+        $this->sorter->bucketSort([-1,2,3, 2]);
+    }
 }
