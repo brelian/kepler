@@ -38,15 +38,33 @@
 相关的接口实现后，在命令行用 `phpunit` 进行测试，如下测试排序算法
 
 ```shell
-> vendor/bin/phpunit tests/SorterTest.php
+> vendor/bin/phpunit tests/SorterTest.php  # 排序测试用例
+> vendor/bin/phpunit tests/SearchTest.php  # 线性查找测试用例
 ```
 测试排序算法。
 ## 数据结构
 
 ### 1. 线性表
-
+- 链表
+    - [单链表](src/Structure/LinkedList/SingleLinkedList.php)
+    - [双链表](src/Structure/LinkedList/DoubleLinkedList.php)
+    - [环形链表](src/Structure/LinkedList/CircularLinkedList.php)
+- 栈
+    - [链表实现](src/Structure/Stack/ArrayStack.php)    
+    - [数组实现](src/Structure/Stack/LinkedStack.php)    
+    
+- 队列
+    - [链表实现](src/Structure/Queue/LinkedListQueue.php)
+    - [数组实现](src/Structure/Queue/ArrayQueue.php)
+    - [环形队列](src/Structure/Queue/CircularQueue.php)
 ### 2. 树
-
+- 二叉树
+    - [二叉树](src/Structure/Tree/BinaryTree.php)
+- 堆
+    - [最大堆](src/Structure/Heap/MaxHeap.php)
+    - [最小堆](src/Structure/Heap/MinHeap.php)
+- 优先队列
+    - [优先队列](src/Structure/PriorityQueue/PriorityQueue.php)
 ### 3. 哈希表
 
 ### 4. 图
@@ -56,6 +74,8 @@
 ## 算法
 
 ### 1. 线性查找
+- [线性查找](src/Algorithm/Search/LinearSearch.php)
+- [二分查找](src/Algorithm/Search/BinarySearch.php)
 
 ### 2. 查找树
 
