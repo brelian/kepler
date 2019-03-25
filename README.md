@@ -43,8 +43,9 @@
 ```shell
 > vendor/bin/phpunit tests/SorterTest.php  # 排序测试用例
 > vendor/bin/phpunit tests/SearchTest.php  # 线性查找测试用例
+> vendor/bin/phpunit tests/PermutationTest.php  # 测试数字全排列
 ```
-测试排序算法。
+
 ## 数据结构
 
 ### 1. 线性表
@@ -87,4 +88,8 @@
 - [选择排序](src/Algorithm/Sort/SelectionSort.php)
 - [桶排序](src/Algorithm/Sort/BucketSort.php)
 - [快速排序](src/Algorithm/Sort/QuickSort.php)
+
+
+## 其他
+- [数字全排列](src/Algorithm/Permutation.php)
 

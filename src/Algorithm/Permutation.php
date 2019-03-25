@@ -8,6 +8,8 @@
 
 namespace App\Algorithm;
 
+define('DFS', 0);
+define('RECURSIVE', 1);
 
 class Permutation
 {
@@ -31,6 +33,11 @@ class Permutation
      * @var int
      */
     protected $step;
+    /**
+     * recurse result
+     * @var array
+     */
+    protected $result;
 
     public function __construct(int $n)
     {
@@ -44,37 +51,43 @@ class Permutation
      * usage:
      *      $three = new Permutation(5);
      *      $three->show();
+     * @param $mode
      */
-    public function show()
+    public function show(int $mode)
     {
-        $this->dfs($this->step);
+        switch ($mode) {
+            case DFS:
+                $this->dfs(1);
+                break;
+            case RECURSIVE:
+                $this->recurse();
+        }
     }
 
     private function dfs(int $step):void
     {
         if ($step === $this->n + 1) {
-            $this->traverse();
+            $this->traverse($this->container);
             return;
         }
-       for ($i = 1; $i <= $this->n; $i++) {
-           if (!$this->visited[$i]) {
-              $this->container[$step] = $i;
-              $this->visited[$i] = true;
-              $this->dfs($step + 1);
-              $this->visited[$i] = false;
-           }
-       }
-       return;
+        for ($i = 1; $i <= $this->n; $i++) {
+            if (!$this->visited[$i]) {
+                $this->container[$step] = $i;
+                $this->visited[$i] = true;
+                $this->dfs($step + 1);
+                $this->visited[$i] = false;
+            }
+        }
+        return;
     }
 
 
-    private function traverse()
+    private function traverse($data)
     {
-       for ($i = 1; $i <= $this->n; $i++) {
-           echo $this->container[$i]. '  ';
-       }
-
-       echo "\n";
+        echo "\n";
+        for ($i = 1; $i <= $this->n; $i++) {
+            echo $data[$i] . '  ';
+        }
     }
     /*
     // 每一个序号都有机会被放入一个盒子中
@@ -121,4 +134,42 @@ class Permutation
     }
     */
 
+
+    // 递归版本
+    /**
+     * 1. 固定第 i 个元素，对剩下的 n - 1 个元素全排列
+     * 2. 将 i 与第 i + 1 个元素交换，重复步骤 1
+     */
+    public function recurse()
+    {
+        $data = [];
+        for ($i = 1; $i <= $this->n; $i++) {
+            $data[$i] = $i;
+        }
+        $this->run(1, $data); // from index 1
+    }
+
+    private function run(int $index, array &$data):void
+    {
+        if ($index === $this->n) {
+            $this->traverse($data);
+            return ;
+        }
+
+        for ($i = $index; $i <= $this->n; $i++) {
+            $this->exchange($data, $i, $index);
+            $this->run($index + 1, $data);
+            $this->exchange($data, $i, $index);
+        }
+    }
+
+    private function exchange(array &$data, int $i, int $j)
+    {
+        if ($data[$i] === $data[$j]) {
+            return ;
+        }
+        $data[$i] ^= $data[$j];
+        $data[$j] ^= $data[$i];
+        $data[$i] ^= $data[$j];
+    }
 }
