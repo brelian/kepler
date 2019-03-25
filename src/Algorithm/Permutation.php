@@ -11,9 +11,25 @@ namespace App\Algorithm;
 
 class Permutation
 {
+    /**
+     * mark item is visited
+     * @var array
+     */
     protected $visited;
+    /**
+     * storage the series
+     * @var array
+     */
     protected $container;
+    /**
+     * show permutation of number n
+     * @var int
+     */
     protected $n;
+    /**
+     * mark current step
+     * @var int
+     */
     protected $step;
 
     public function __construct(int $n)
@@ -24,6 +40,11 @@ class Permutation
         $this->step = 1;
     }
 
+    /**
+     * usage:
+     *      $three = new Permutation(5);
+     *      $three->show();
+     */
     public function show()
     {
         $this->dfs($this->step);
