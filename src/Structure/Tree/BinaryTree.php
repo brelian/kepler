@@ -8,6 +8,7 @@
 
 namespace App\Structure\Tree;
 use App\Structure\ADT\BinaryTree as BinaryTreeInterface;
+use App\Structure\Stack\ArrayStack;
 
 class BinaryTree implements BinaryTreeInterface
 {
@@ -69,15 +70,58 @@ class BinaryTree implements BinaryTreeInterface
 
     public function preOrderTraverse()
     {
-
+        $this->_preOrderTraverse();
     }
 
-    public function _preOrderTraverse(BinaryNode $node)
+    private function _preOrderTraverse(BinaryNode $node)
     {
         if ($node !== null) {
             echo $node->data;
             $this->_preOrderTraverse($node->left);
             $this->_preOrderTraverse($node->right);
         }
+    }
+
+    public function delLeft()
+    {
+        // TODO: Implement delLeft() method.
+    }
+
+    public function delRight()
+    {
+        // TODO: Implement delRight() method.
+    }
+
+
+    /**
+     *  1. 首选将当前节点root的各个左子节点压入栈
+     *  2. 然后依次从栈中取数据，进行打印，将当前节点置为栈顶的右孩子节点，回到1
+     *  3. 直至栈为空
+     */
+    public function midOrderTraverse()
+    {
+        $current = $this->root;
+        $stack = new ArrayStack(1020);
+        if ($current === null) {
+            return ;
+        }
+        while ($current !== null || $stack->size() > 0) {
+            while ($current !== null) {
+                $stack->push($current);
+                $current = $current->left;
+            }
+
+            if ($stack->size() > 0) {
+                $current = $stack->pop();
+                echo "\n" . $current->data; // output node value
+                $current = $current->right;
+            }
+        }
+    }
+
+
+    public function postOrderTraverse()
+    {
+        // TODO: Implement postOrderTraverse() method.
     }
 }

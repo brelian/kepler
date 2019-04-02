@@ -36,9 +36,10 @@ interface Stack
 
     /**
      * 删除栈顶元素
+     * @param $item 添加的元素
      * @return mixed
      */
-    public function push();
+    public function push($item);
 
     /**
      * 判断栈是否为空
@@ -51,4 +52,10 @@ interface Stack
      * @return mixed
      */
     public function top();
+
+    /**
+     * 返回 stack 的长度
+     * @return mixed
+     */
+    public function size();
 }
