@@ -101,4 +101,34 @@ class SingleLinkedList implements LinkedList
     }
 
 
+    /**
+     * 单链表反转
+     * @return Node
+     */
+    public function reverse(): Node
+    {
+        if ($this->isEmpty()) {
+            return null;
+        }
+
+        $current = $this->head;
+        $reverseHead = null;
+        $preNode = null;
+
+        while ($current !== null) {
+            $next = $current->next;
+            if ($next === null) {
+                $reverseHead = $next;
+            }
+
+            // the next node of current is before node
+            $current->next = $preNode;
+            $preNode = $current;
+
+            $current  = $next;
+        }
+
+        return $reverseHead;
+    }
+
 }
