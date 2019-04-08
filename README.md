@@ -32,6 +32,9 @@
 ```
 
 ## Change Log
+**2019-04-08**
+> 完成 HashMap
+
 **2019-03-26**
 > 完成 KMP
 
@@ -75,9 +78,10 @@
 - 优先队列
     - [优先队列](src/Structure/PriorityQueue/PriorityQueue.php)
 ### 3. 哈希表
-
+- [哈希表](src/Structure/Hash/HashMap.php)
 ### 4. 图
-
+- DFS
+- BFS
 
 
 ## 算法
