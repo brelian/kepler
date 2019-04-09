@@ -32,6 +32,9 @@
 ```
 
 ## Change Log
+**2019-04-09**
+> 完成 merge sort
+
 **2019-04-08**
 > 完成 HashMap
 
@@ -45,13 +48,11 @@
 > 完成线性查找和二分查找迭代版
 
 **2019-03-21**
-
 > 完成选择序算法  
 > 完成插入序算法
 
 
 **2019-03-07**
-
 > 完成快速排序算法
 
 ## 数据结构
@@ -97,6 +98,7 @@
 - [选择排序](src/Algorithm/Sort/SelectionSort.php)
 - [桶排序](src/Algorithm/Sort/BucketSort.php)
 - [快速排序](src/Algorithm/Sort/QuickSort.php)
+- [归并排序](src/Algorithm/Sort/MergeSort.php)
 
 
 ## 其他
