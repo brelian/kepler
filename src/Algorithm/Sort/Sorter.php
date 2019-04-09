@@ -35,7 +35,8 @@ class Sorter implements SorterInterface
 
     public function mergeSort(array $data)
     {
-        // TODO: Implement mergeSort() method.
+        $sorter = new MergeSort();
+        return $sorter->sort($data);
     }
 
     public function quickSort(array $data)
