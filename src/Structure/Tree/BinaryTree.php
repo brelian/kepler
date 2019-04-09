@@ -68,18 +68,38 @@ class BinaryTree implements BinaryTreeInterface
     }
 
 
-    public function preOrderTraverse()
+    public function preOrderTraverse(bool $recursive)
     {
-        $this->_preOrderTraverse();
+        return $recursive ? $this->_preOrderTraverse($this->root) : $this->preOrderTraverseWithoutRecursive();
+    }
+
+    private function preOrderTraverseWithoutRecursive()
+    {
+        $stack = new ArrayStack(1024);
+        $node = $this->root;
+        $stack->push($node);
+        while (!$stack->isEmpty()) {
+            $node = $stack->pop();
+            echo "\n";
+            echo $node->data;
+            if ($node->right) {
+                $stack->push($node->right);
+            }
+            if ($node->left) {
+                $stack->push($node->left);
+            }
+        }
     }
 
     private function _preOrderTraverse(BinaryNode $node)
     {
-        if ($node !== null) {
-            echo $node->data;
-            $this->_preOrderTraverse($node->left);
-            $this->_preOrderTraverse($node->right);
+        if (!$node) {
+            return;
         }
+        echo "\n";
+        echo $node->data;
+        $this->_preOrderTraverse($node->left);
+        $this->_preOrderTraverse($node->right);
     }
 
     public function delLeft()
@@ -93,34 +113,44 @@ class BinaryTree implements BinaryTreeInterface
     }
 
 
-    /**
-     *  1. 首选将当前节点root的各个左子节点压入栈
-     *  2. 然后依次从栈中取数据，进行打印，将当前节点置为栈顶的右孩子节点，回到1
-     *  3. 直至栈为空
-     */
-    public function midOrderTraverse()
+    public function inOrderTraverse(bool $recursive)
     {
-        $current = $this->root;
-        $stack = new ArrayStack(1020);
-        if ($current === null) {
-            return ;
-        }
-        while ($current !== null || $stack->size() > 0) {
-            while ($current !== null) {
-                $stack->push($current);
-                $current = $current->left;
+        return $recursive ? $this->_inOrderTraverse($this->root) : $this->inOrderTraverseWithoutRecursive();
+    }
+
+    private function inOrderTraverseWithoutRecursive()
+    {
+        $stack = new ArrayStack(1024);
+        $node = $this->root;
+        while ($node || !$stack->isEmpty()) {
+            while ($node) {
+                $stack->push($node);
+                $node = $node->left;
             }
 
-            if ($stack->size() > 0) {
-                $current = $stack->pop();
-                echo "\n" . $current->data; // output node value
-                $current = $current->right;
+            if (!$stack->isEmpty()) {
+                $visited = $stack->pop();
+                echo "\n";
+                echo $visited->data;
+                $node = $node->right;
             }
         }
+
+    }
+
+    private function _inOrderTraverse($node)
+    {
+        if (!$node) {
+            return ;
+        }
+        $this->_inOrderTraverse($node->left);
+        echo "\n";
+        echo $node->data;
+        $this->_inOrderTraverse($node->right);
     }
 
 
-    public function postOrderTraverse()
+    public function postOrderTraverse(bool $recursive)
     {
         // TODO: Implement postOrderTraverse() method.
     }
