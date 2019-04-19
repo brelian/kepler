@@ -28,4 +28,18 @@ class JianzhiOfferTest extends TestCase
         $this->assertEquals($this->offer->findRepeatInArray([2,3,1,0,2,5,3]), 2);
     }
 
+    public function testFindInTwoDimensionalArray()
+    {
+        $data = [
+            [1,2,8,9],
+            [2,4,9,12],
+            [4,7,10,13],
+            [6,8,11,15]
+        ];
+        $this->assertEquals($this->offer->findInTwoDimensionalArray($data, 2), true);
+        $this->assertEquals($this->offer->findInTwoDimensionalArray($data, 7), true);
+        $this->assertEquals($this->offer->findInTwoDimensionalArray($data, 5),false);
+        $this->assertEquals($this->offer->findInTwoDimensionalArray($data, 6), true);
+    }
+
 }

@@ -48,4 +48,23 @@ class JianzhiOffer
         return false;
     }
 
+
+    public function findInTwoDimensionalArray(array $arr, $target)
+    {
+        $i = 0;
+        $vLen = count($arr);
+        $j = count($arr[0]) - 1;
+        while ($i < $vLen && $j >= 0 ) {
+            if ($target === $arr[$i][$j]) {
+                return true;
+            } else if ($target < $arr[$i][$j]) {
+                $j--;
+            } else {
+                $i++;
+            }
+        }
+
+        return false;
+    }
+
 }
