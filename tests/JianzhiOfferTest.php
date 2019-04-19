@@ -42,4 +42,13 @@ class JianzhiOfferTest extends TestCase
         $this->assertEquals($this->offer->findInTwoDimensionalArray($data, 6), true);
     }
 
+
+    public function testFibonacci()
+    {
+        $this->assertEquals($this->offer->fibonacci(0), 0);
+        $this->assertEquals($this->offer->fibonacci(1), 1);
+        $this->assertEquals($this->offer->fibonacci(2), 1);
+        $this->assertEquals($this->offer->fibonacci(20), 6765);
+    }
+
 }

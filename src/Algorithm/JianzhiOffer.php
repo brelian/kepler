@@ -12,6 +12,7 @@ namespace App\Algorithm;
 class JianzhiOffer
 {
     /**
+     * No.3
      * given n integer items array, and all items in [0, n-1]
      * assumption:
      *  1. each given array must have at least a repeat item
@@ -48,7 +49,12 @@ class JianzhiOffer
         return false;
     }
 
-
+    /**
+     * Mo.4 find item in two sorted dimensional array
+     * @param array $arr
+     * @param $target
+     * @return bool
+     */
     public function findInTwoDimensionalArray(array $arr, $target)
     {
         $i = 0;
@@ -67,4 +73,27 @@ class JianzhiOffer
         return false;
     }
 
+
+    public function fibonacci(int $n)
+    {
+        if ($n < 0) {
+            return false;
+        }
+        if ($n < 2) {
+            return $n;
+        }
+
+        $result = 0;
+        $beforeOne = 1;
+        $beforeTwo = 0;
+
+        $i = 2;
+        while ($i <= $n) {
+            $result = $beforeOne + $beforeTwo;
+            $beforeTwo = $beforeOne;
+            $beforeOne = $result;
+            $i++;
+        }
+        return $result;
+    }
 }
