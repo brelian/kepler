@@ -32,6 +32,9 @@
 ```
 
 ## Change Log
+**2019-04-19**
+> 添加《剑指Offer》No.3 No.4
+
 **2019-04-09**
 > 完成 merge sort
 
@@ -100,7 +103,9 @@
 - [快速排序](src/Algorithm/Sort/QuickSort.php)
 - [归并排序](src/Algorithm/Sort/MergeSort.php)
 
-
+## 《剑指 Offer》
+- [No.3 数组中重复的数组](/src/Algorithm/JianzhiOffer.php)
+- [No.4 二维数组中的查找](/src/Algorithm/JianzhiOffer.php)
 ## 其他
 - [数字全排列](src/Algorithm/Permutation.php)
 - [KMP](src/Algorithm/FindSubString.php)
