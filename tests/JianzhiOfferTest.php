@@ -51,4 +51,16 @@ class JianzhiOfferTest extends TestCase
         $this->assertEquals($this->offer->fibonacci(20), 6765);
     }
 
+	public function testTurnMinInArray()
+	{
+		$this->assertEquals($this->offer->turnMinInArray([3,4,5,1,2,3]),1);
+		$this->assertEquals($this->offer->turnMinInArray([3,3,3,1,2,3]),1);
+		$this->assertEquals($this->offer->turnMinInArray([1,1,1,0,1,1]),0);
+		$this->assertEquals($this->offer->turnMinInArray([1,2,3,4,5]),5);
+		$this->assertEquals($this->offer->turnMinInArray([3]),3);
+		$this->assertEquals($this->offer->turnMinInArray([1,0,1,1,1]),0);
+		$this->assertEquals($this->offer->turnMinInArray([1,1,1,0,1]),0);
+		$this->assertEquals($this->offer->turnMinInArray([1,1,1,1,1]),1);	
+	}	
+
 }

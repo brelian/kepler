@@ -96,4 +96,36 @@ class JianzhiOffer
         }
         return $result;
     }
+
+	public function turnMinInArray(array $arr)
+	{
+		$i = 0;
+		$j = count($arr) - 1;
+		
+		while ($j > $i + 1) {
+			$mid = (($j - $i) >> 1) + $i;
+			if ($arr[$mid] === $arr[$i] && $arr[$mid] === $arr[$j] ) {
+				return $this->findInOrder($arr, $i, $j);
+			}				
+						
+			if ($arr[$mid] >= $arr[$i]) {
+				$i = $mid;			
+			} else {
+				$j = $mid;			
+			}				
+		}
+
+		return $arr[$j];				
+	}
+
+	private function findInOrder(array $arr, int $start, int $end)
+	{
+		for ($i = $start + 1; $i <= $end; $i++) {
+			if ($arr[$i] < $arr[$i-1]) return $arr[$i];
+		}
+		
+		return $arr[$end];
+	}
+
+
 }
