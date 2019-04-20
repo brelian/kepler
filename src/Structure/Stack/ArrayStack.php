@@ -22,10 +22,13 @@ class ArrayStack implements Stack
      */
     private $limit;
 
+    private $top;
+
     public function __construct(int $limit)
     {
         $this->stack = [];
         $this->limit = $limit;
+        $this->top = 0;
     }
 
     public function pop()
@@ -34,7 +37,7 @@ class ArrayStack implements Stack
     }
 
 
-    public function push()
+    public function push($item)
     {
         // TODO: Implement push() method.
     }
@@ -47,6 +50,11 @@ class ArrayStack implements Stack
     public function top()
     {
         // TODO: Implement top() method.
+    }
+
+    public function size()
+    {
+        // TODO: Implement size() method.
     }
 
 }

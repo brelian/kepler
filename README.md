@@ -32,6 +32,15 @@
 ```
 
 ## Change Log
+**2019-04-19**
+> 添加《剑指Offer》No.3 No.4 No.10
+
+**2019-04-09**
+> 完成 merge sort
+
+**2019-04-08**
+> 完成 HashMap
+
 **2019-03-26**
 > 完成 KMP
 
@@ -42,13 +51,11 @@
 > 完成线性查找和二分查找迭代版
 
 **2019-03-21**
-
 > 完成选择序算法  
 > 完成插入序算法
 
 
 **2019-03-07**
-
 > 完成快速排序算法
 
 ## 数据结构
@@ -75,9 +82,10 @@
 - 优先队列
     - [优先队列](src/Structure/PriorityQueue/PriorityQueue.php)
 ### 3. 哈希表
-
+- [哈希表](src/Structure/Hash/HashMap.php)
 ### 4. 图
-
+- DFS
+- BFS
 
 
 ## 算法
@@ -93,8 +101,12 @@
 - [选择排序](src/Algorithm/Sort/SelectionSort.php)
 - [桶排序](src/Algorithm/Sort/BucketSort.php)
 - [快速排序](src/Algorithm/Sort/QuickSort.php)
+- [归并排序](src/Algorithm/Sort/MergeSort.php)
 
-
+## 《剑指 Offer》
+- [No.3 数组中重复的数组](/src/Algorithm/JianzhiOffer.php)
+- [No.4 二维数组中的查找](/src/Algorithm/JianzhiOffer.php)
+- [No.10 Fibonacci 数列](/src/Algorithm/JianzhiOffer.php)
 ## 其他
 - [数字全排列](src/Algorithm/Permutation.php)
 - [KMP](src/Algorithm/FindSubString.php)

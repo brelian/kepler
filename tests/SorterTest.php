@@ -48,6 +48,18 @@ class SorterTest extends TestCase
     }
 
 
+    public function testMergeSort()
+    {
+
+        $this->assertEquals($this->sorter->mergeSort([]),[]);
+        $this->assertEquals($this->sorter->mergeSort([1]),[1]);
+        $this->assertEquals($this->sorter->mergeSort([2,1]),[1,2]);
+        $this->assertEquals($this->sorter->mergeSort([1,2,3]),[1,2,3]);
+        $this->assertEquals($this->sorter->mergeSort([2,3,1]),[1,2,3]);
+        $this->assertEquals($this->sorter->mergeSort([1,3,2]),[1,2,3]);
+        $this->assertEquals($this->sorter->mergeSort([1,2,3,2]),[1,2,2,3]);
+    }
+
     public function testInsertionSort()
     {
 

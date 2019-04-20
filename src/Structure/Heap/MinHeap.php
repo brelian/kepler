@@ -81,7 +81,9 @@ class MinHeap implements Heap
 
     private function heapItemSwap(int $a ,int $b)
     {
-        // TODO
+        $tmp = $this->heap[$a];
+        $this->heap[$a] = $this->heap[$b];
+        $this->heap[$b] = $tmp;
     }
 
 

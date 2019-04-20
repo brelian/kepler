@@ -51,9 +51,9 @@ interface BinaryTree
 {
     public function clear();
 
-    public function preOrderTraverse();
-    public function midOrderTraverse();
-    public function postOrderTraverse();
+    public function preOrderTraverse(bool $flag);
+    public function inOrderTraverse(bool $flag);
+    public function postOrderTraverse(bool $flag);
 
     public function size();
     public function height();
