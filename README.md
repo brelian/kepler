@@ -103,6 +103,52 @@
 - [快速排序](src/Algorithm/Sort/QuickSort.php)
 - [归并排序](src/Algorithm/Sort/MergeSort.php)
 
+
+## LeetCode
+### 链表
+- No.206 Reverse Linked List
+- No.92 Reverse Linked List II (from Mth node to Nth node)
+- No.160 Intersection of Two Linked Lists
+- No.141 Linked List Cycle
+- No.142 Linked List Cycle II
+- No.86 Partition List
+- No.138 Copy List with Random Pointer
+- No.21 Merge Two Sorted Lists
+- No.23 Merge k Sorted Lists
+### 栈、队列 & 堆
+- No.225 Implement Stack using Queues
+- No.232 Implement Queue using Stacks
+- NO.155 Min Stack
+- No.1363 Rails from por.org
+- No.224 Basic Calculator
+- No.215 Kth Largest Element in an Array
+- No.295 Find Median from Data Stream
+
+### 贪心
+- No.455 Assign Cookies
+- No.376 Wiggle Subsequence
+- No.402 Remove K Digits
+- No.55 Jump Game
+- No.45 Jump Game II
+- No.425 Word Squares
+
+### 递归、回溯
+- No.78 Subsets
+- No.90 Subsets II
+- No.40 Combination Sum II
+- No.22 Generate Parentheses
+
+### 二叉树与图
+
+### 二分查找与二叉树排序
+
+### 哈希表与字符串
+
+### 搜索
+
+### 动态规划
+
+
 ## 《剑指 Offer》
 - [No.3 数组中重复的数组](/src/Algorithm/JianzhiOffer.php)
 - [No.4 二维数组中的查找](/src/Algorithm/JianzhiOffer.php)
