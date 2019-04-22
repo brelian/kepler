@@ -33,6 +33,11 @@
 
 ## Change Log
 **2019-04-19**
+
+> 添加《剑指Offer》No.11
+
+**2019-04-19**
+
 > 添加《剑指Offer》No.3 No.4 No.10
 
 **2019-04-09**
@@ -153,6 +158,7 @@
 - [No.3 数组中重复的数组](/src/Algorithm/JianzhiOffer.php)
 - [No.4 二维数组中的查找](/src/Algorithm/JianzhiOffer.php)
 - [No.10 Fibonacci 数列](/src/Algorithm/JianzhiOffer.php)
+- [No.11 旋转数组的最小数字](/src/Algorithm/JianzhiOffer.php)
 ## 其他
 - [数字全排列](src/Algorithm/Permutation.php)
 - [KMP](src/Algorithm/FindSubString.php)
