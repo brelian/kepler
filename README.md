@@ -32,6 +32,9 @@
 ```
 
 ## Change Log
+**2019-04-29**
+> 添加 LeetCode 一些题目
+
 **2019-04-19**
 
 > 添加《剑指Offer》No.11
@@ -144,10 +147,20 @@
 - No.22 Generate Parentheses
 
 ### 二叉树与图
+- No.113
+- No.236
+- No.114
+- No.199
 
 ### 二分查找与二叉树排序
 
 ### 哈希表与字符串
+- No.409 Longest Palindrome
+- No.290 Word Pattern 
+- No.49 Group Anagrams
+- No.3 Longest Substring without Repeating charters
+- No.187 Repeated DNA Sequence
+- No.76 Minimum Window Substring
 
 ### 搜索
 
