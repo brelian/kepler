@@ -32,6 +32,9 @@
 ```
 
 ## Change Log
+**2019-04-30**
+> 添加 LeetCode 搜索相关题目
+
 **2019-04-29**
 > 添加 LeetCode 一些题目
 
@@ -95,9 +98,7 @@
 - DFS
 - BFS
 
-
 ## 算法
-
 ### 1. 线性查找
 - [线性查找](src/Algorithm/Search/LinearSearch.php)
 - [二分查找](src/Algorithm/Search/BinarySearch.php)
@@ -163,6 +164,9 @@
 - No.76 Minimum Window Substring
 
 ### 搜索
+- No.200 Number of Islands
+- No.127 Word Ladder
+- No.126 Word Ladder II
 
 ### 动态规划
 
