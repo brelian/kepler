@@ -32,7 +32,10 @@
 ```
 
 ## Change Log
-**219-05-01**
+**2019-08-06**
+> 添加一些数据结构
+
+**2019-05-01**
 > 添加一些 LeetCode 题目
 
 **2019-04-30**
@@ -97,11 +100,21 @@
     - [优先队列](src/Structure/PriorityQueue/PriorityQueue.php)
 ### 3. 哈希表
 - [哈希表](src/Structure/Hash/HashMap.php)
+
 ### 4. 图
 - DFS
 - BFS
+### Disjoint Set 并查集
+
+### Trie
+
+### BloomFilter
+
+### LRU Cache
 
 ## 算法
+### General Coding
+
 ### 1. 线性查找
 - [线性查找](src/Algorithm/Search/LinearSearch.php)
 - [二分查找](src/Algorithm/Search/BinarySearch.php)
@@ -114,6 +127,12 @@
 - [桶排序](src/Algorithm/Sort/BucketSort.php)
 - [快速排序](src/Algorithm/Sort/QuickSort.php)
 - [归并排序](src/Algorithm/Sort/MergeSort.php)
+
+### Greedy
+
+### Recursion/Backtrace
+
+### Dynamic Programming
 
 
 ## LeetCode
